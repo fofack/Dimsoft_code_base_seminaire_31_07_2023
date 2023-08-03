@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <title>Form validation</title>
+</head>
+
+<body>
+    <main id="main-container">
+      <button class="js-closer" data-to-close="main-container">Fermer le formulaire</button>
+      <form id="register-form" class="js-form">
+        <h1>S'inscrire</h1>
+        <div>
+          <label for="nom">Nom<span class="required-marker">*</span></label>
+          <div class="form-input-container" id="nom-input-wrapper">
+            <input type="text" id="nom" name="nom" class="form-input js-form-field" data-minlength="4" data-minlength-error="Le nom doit avoir au moins 4 caractères." data-error-elem-id="nom-input-wrapper" required>
+          </div>
+        </div>
+        <div>
+          <label for="age">Âge<span class="required-marker">*</span></label>
+          <div class="form-input-container" id="age-input-wrapper">
+            <input type="text" id="age" name="age" class="form-input js-form-field" data-min-int="7" data-max-int="77" data-error-elem-id="age-input-wrapper" required>
+          </div>
+        </div>
+        <div>
+          <label for="email">Email<span class="required-marker">*</span></label>
+          <div class="form-input-container" id="email-input-wrapper">
+            <input type="text" id="email" name="email" class="form-input js-form-field" data-regex="^[a-z0-9]{4,}@[a-z0-9]{4,}.[a-z0-9]{2,4}$" data-regex-error="L'email doit être valide." data-error-elem-id="email-input-wrapper" required>
+          </div>
+        </div>
+        <input type="submit" value="S'inscrire">
+      </form>
+    </main>
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.required-marker {
+    color: red;
+}
+
+[data-error]::after {
+    display: block;
+    color: red;
+    content: attr(data-error);
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden-important {
+    display: none !important;
+}
